@@ -1,0 +1,30 @@
+.djs{
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 409px;
+    margin: 100px auto 0;
+    background: url('../images/1.png') no-repeat;
+}
+.djs h2{
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+.time{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 220px;
+    transform: translateX(-50%);
+    color: #fff;
+}
+.time span{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: rgba(0, 0, 0, 0.3);
+}

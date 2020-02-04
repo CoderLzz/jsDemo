@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="djs">
+        <h2>倒计时</h2>
+        <div class="time">
+            <span class="day"></span> 天
+            <span class="hour"></span> 时
+            <span class="minute"></span> 分
+            <span class="second"></span> 秒
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script>
+        countDown('2021-02-06')
+        setInterval(function(){
+            countDown('2021-02-06')
+        },1000)
+    </script>
+</body>
+</html>
