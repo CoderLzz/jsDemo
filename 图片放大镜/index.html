@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/magnifier.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="small">
+            <img src="images/small.png">
+            <div class="mask"></div>
+        </div>
+        <div class="big">
+            <img src="images/big.jpg">
+        </div>
+    </div>
+    <script src="js/magnifier.js"></script>
+    <script>
+        // 算好图片放大比例，做好大图，公式如下：大图片的宽=小框的宽/mask的宽*大框的宽
+        magnifier({
+            bigImgW:1600,
+            maskWidth:50,
+            maskHeight:50
+        })
+    </script>
+</body>
+</html>
