@@ -1,42 +1,42 @@
 /**
  * 
- * @param {*} element 发生动画的元素
- * @param {*} target  元素到达的目标位置
- * @param {*} attr 元素的哪个属性发生变化
- * @param {*} fn 回调函数
+ * @param {*} obj.element 发生动画的元素
+ * @param {*} obj.target  元素到达的目标位置
+ * @param {*} obj.attr 元素的哪个属性发生变化
+ * @param {*} obj.fn 回调函数
  */
-function uniformAnimation(element, target,attr,fn) {
-    clearInterval(element.timeId)
-    if(attr=='opacity'){
-        element.timeId=setInterval(function(){
-            var current=Number(window.getComputedStyle(element)[attr])
+function uniformAnimation(obj) {
+    clearInterval(obj.element.timeId)
+    if(obj.attr=='opacity'){
+        obj.element.timeId=setInterval(function(){
+            var current=Number(window.getComputedStyle(obj.element)[obj.attr])
             var step=0.1
-            step=current-target<0?step:-step
+            step=current-obj.target<0?step:-step
             current+=step
-            if(Math.abs(target-current)<Math.abs(step)){
-                clearInterval(element.timeId)
-                element.style[attr]=target
-                if(fn){
-                    fn()
+            if(Math.abs(obj.target-current)<Math.abs(step)){
+                clearInterval(obj.element.timeId)
+                obj.element.style[obj.attr]=obj.target
+                if(obj.fn){
+                    obj.fn()
                 }
             }else{
-                element.style[attr]=current
+                obj.element.style[obj.attr]=current
             }
         },200)
     }else{
-        element.timeId=setInterval(function(){
-            var current=parseInt(window.getComputedStyle(element)[attr])
+        obj.element.timeId=setInterval(function(){
+            var current=parseInt(window.getComputedStyle(obj.element)[obj.attr])
             var step=15
-            step=current-target<0?step:-step
+            step=current-obj.target<0?step:-step
             current+=step
-            if(Math.abs(target-current)<Math.abs(step)){
-                clearInterval(element.timeId)
-                element.style[attr]=target+'px'
-                if(fn){
-                    fn()
+            if(Math.abs(obj.target-current)<Math.abs(step)){
+                clearInterval(obj.element.timeId)
+                obj.element.style[obj.attr]=obj.target+'px'
+                if(obj.fn){
+                    obj.fn()
                 }
             }else{
-                element.style[attr]=current+'px'
+                obj.element.style[obj.attr]=current+'px'
             }
         },20)
     }
