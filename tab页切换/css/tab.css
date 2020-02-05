@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+li{
+    list-style: none;
+}
+.tab .now{
+    background-color: pink;
+    color: #fff;
+}
+.tab{
+    display: inline-block;
+    height: 500px;
+    margin: 100px 0 0 500px;
+}
+.tabHeader li{
+    float: left;
+    width: 100px;
+    height: 60px;
+    margin-right: 10px;
+    background-color: red;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+.tabHeader li:last-child{
+    margin-right: 0;
+}
+.tab div{
+    display: none;
+    height: 440px;
+    background-color: blue;
+}
+.tab .active{
+    display: block;
+}
