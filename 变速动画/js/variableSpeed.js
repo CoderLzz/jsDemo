@@ -12,11 +12,19 @@ function variableSpeed(obj) {
             }else if(attr=='zIndex'){
                 obj.element.style[attr]=obj.json[attr]
             } else {
-                var target=obj.json[attr]
-                var current = parseInt(window.getComputedStyle(obj.element)[attr])
-                var step = current<target?Math.ceil((target - current) / 10):Math.floor((target - current) / 10)
-                current += step
-                obj.element.style[attr]=current+'px'
+                if(window.getComputedStyle(obj.element)[attr]){
+                    var target=obj.json[attr]
+                    var current = parseInt(window.getComputedStyle(obj.element)[attr])
+                    var step = current<target?Math.ceil((target - current) / 10):Math.floor((target - current) / 10)
+                    current += step
+                    obj.element.style[attr]=current+'px'
+                }else{
+                    var target=obj.json[attr]
+                    var current=parseInt(obj.element[attr])
+                    var step = current<target?Math.ceil((target - current) / 10):Math.floor((target - current) / 10)
+                    current += step
+                    obj.element[attr]=current
+                }
             }
             if(current!=target){
                 flag=false
