@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/goApex.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div class="goUp">回到顶端</div>
+    <script src="../获取元素卷曲的距离/getScroll.js"></script>
+    <script src="../变速动画/js/variableSpeed.js"></script>
+    <script>
+        var goUp=document.querySelector('.goUp')
+        document.onscroll=function(){
+            if(getScroll().top>600){
+                goUp.style.display='block'
+            }else{
+                goUp.style.display='none'
+            }
+        }
+        goUp.addEventListener('click',function(){
+            variableSpeed({
+                element:document.documentElement,
+                json:{
+                    scrollTop:0
+                }
+            })
+        },false)
+    </script>
+</body>
+</html>
