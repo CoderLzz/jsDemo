@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+.swiper{
+    width: 721px;
+    height: 455px;
+    margin: 100px auto 0;
+    padding: 10px;
+    border: 1px solid #000;
+}
+.screen{
+    position: relative;
+    overflow: hidden;
+    width: 721px;
+    height: 455px;
+}
+.screen ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3605px;
+}
+.screen ul li{
+    float: left;
+}
+.screen .left{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    cursor: pointer;
+}
+.screen .right{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+.screen ol{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.screen ol li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+.active{
+    background-color: orange !important;
+}
