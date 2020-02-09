@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+.box{
+    width: 800px;
+    height: 400px;
+    margin:  0 auto;
+    border: 1px solid #000;
+}
+.controll{
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 100px;
+}
+button{
+    padding: 5px;
+}
+.box ul{
+    float: left;
+    margin-left: 35px;
+    margin-top: 50px;
+}
+.box ul li{
+    float: left;
+    width: 80px;
+    height: 50px;
+    border: 1px solid blue;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 5px;
+}
+.choose{
+    background-color: pink;
+}
