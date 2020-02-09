@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/carousel.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li><a href="javascript:;"><img src="images/slidepic1.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/slidepic2.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/slidepic3.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/slidepic4.jpg" alt=""></a></li>
+            <li><a href="javascript:;"><img src="images/slidepic5.jpg" alt=""></a></li>
+        </ul>
+        <div class="prev">
+            <img src="images/prev.png" alt="">
+        </div>
+        <div class="next">
+            <img src="images/next.png" alt="">
+        </div>
+    </div>
+    <script src="../变速动画/js/variableSpeed.js"></script>
+    <script src="js/carousel.js"></script>
+    <script>
+        var positions = [{
+                opacity: 0.3,
+                zIndex: -2,
+                width: 400,
+                left: 200,
+                top: 0
+            },
+            {
+                opacity: 0.8,
+                zIndex: -1,
+                width: 600,
+                left: 150,
+                top: 70
+            },
+            {
+                opacity: 1,
+                zIndex: 1,
+                width: 800,
+                left: 370,
+                top: 100
+            },
+            {
+                opacity: 0.8,
+                zIndex: -1,
+                width: 600,
+                left: 750,
+                top: 70
+            },
+            {
+                opacity: 0.3,
+                zIndex: -2,
+                width: 400,
+                left: 900,
+                top: 0
+            }
+        ]
+        carousel({
+            positions
+        })
+    </script>
+</body>
+
+</html>
